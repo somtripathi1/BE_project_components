@@ -1,9 +1,12 @@
-document.querySelector('.order').addEventListener('click', function(e) {
-    let button = e.target;
-    if (!button.classList.contains('animate')) {
-    button.classList.add('animate');
-    setTimeout(() => {
-    button.classList.remove('animate');
-    }, 10000);
+$('.order').click(function(e) {
+
+    let button = $(this);
+
+    if(!button.hasClass('animate')) {
+        button.addClass('animate');
+        setTimeout(() => {
+            button.removeClass('animate');
+        }, 10000);
     }
-    });
+
+});
